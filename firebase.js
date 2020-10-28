@@ -34,12 +34,14 @@ document.getElementById('submit').onclick = function(){
     document.getElementById('details').value =' ';
 }
 
-document.getElementById('fb-btn').onclick = function(){
+document.getElementById('username').onchange = function(){
     Ready();
     firebase.database().ref('users/' + username).once('value',function(snapshot){
       document.getElementById('details').value = snapshot.val().details;
   });
 }
+
+
 
 document.getElementById('edit').onclick = function(){
     Ready();
