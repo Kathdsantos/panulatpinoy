@@ -1,0 +1,41 @@
+.container{
+  height:40px;
+  width: 1360px;
+}
+.container2{
+  margin-top: 50px;
+  background: url('backgroundimage.png') no-repeat center center; 
+  background-size: cover;
+  height:600px;
+  width: 1360px;
+  background-size: cover;
+}
+h3{
+  margin-top: 210px;
+  font-size: 140px;
+  padding-top: 50px;
+  padding-left: 90px;
+}
+.submitalert{
+  width: 200px;
+}
+.deletealert{
+  width: 200px;
+}
+.username{
+  margin-top: 180px;
+  font-size: 100px;
+  padding-top: 35px;
+  padding-left: 20px;
+}
+.list-group-item{
+  width: 30px;
+}
+.email{
+  padding-left: 5px;
+}
+.form-group{
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
