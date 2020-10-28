@@ -63,6 +63,7 @@ window.fbAsyncInit = function() {
           document.getElementById('heading').style.display = 'none';
           document.getElementById('details').style.display = 'block';
           document.getElementById('submit').style.display = 'block';
+          document.getElementById('edit').style.display = 'block';
           document.getElementById('delete').style.display = 'block';
         } else {
           document.getElementById('logout').style.display = 'none';
@@ -71,6 +72,7 @@ window.fbAsyncInit = function() {
           document.getElementById('heading').style.display = 'block';
           document.getElementById('details').style.display = 'none';
           document.getElementById('submit').style.display = 'none';
+          document.getElementById('edit').style.display = 'none';
           document.getElementById('delete').style.display = 'none';
         }
       }
