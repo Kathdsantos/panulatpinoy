@@ -65,6 +65,7 @@ window.fbAsyncInit = function() {
           document.getElementById('submit').style.display = 'block';
           document.getElementById('edit').style.display = 'block';
           document.getElementById('delete').style.display = 'block';
+          
         } else {
           document.getElementById('logout').style.display = 'none';
           document.getElementById('profile').style.display = 'none';

@@ -34,7 +34,7 @@ document.getElementById('submit').onclick = function(){
     document.getElementById('details').value =' ';
 }
 
-document.getElementById('edit').onload = function(){
+document.getElementById('details').onload = function(){
     Ready();
     firebase.database().ref('users/' + username).once('value',function(snapshot){
       document.getElementById('details').value = snapshot.val().details;
