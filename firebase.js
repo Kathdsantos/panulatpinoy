@@ -31,13 +31,13 @@ document.getElementById('submit').onclick = function(){
     setTimeout(function(){
       document.querySelector('.submitalert').style.display = 'none';
     },2000);
-    document.getElementById('details').value=' ';
+    document.getElementById('details').value =' ';
 }
 
-document.getElementById('edit').onclick=function(){
+document.getElementById('edit').onload = function(){
     Ready();
     firebase.database().ref('users/' + username).once('value',function(snapshot){
-      document.getElementById('details').value=snapshot.val().details;
+      document.getElementById('details').value = snapshot.val().details;
   });
 }
 
