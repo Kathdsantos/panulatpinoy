@@ -38,6 +38,7 @@
       <div id="submitalert" class="submitalert alert-dismissible alert-info">Successfully saved.</div>
       <div id="deletealert" class="deletealert alert-dismissible alert-danger">Successfully deleted.</div>
       <textarea class="form-control" id="details" placeholder="Type here." rows="3"></textarea>
+      <h1 id="error"></h1>
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <button id="submit" class="btn btn-primary">Submit</button>
         </label>
@@ -49,6 +50,14 @@
         <button id="delete" class="btn btn-primary">Delete my notes.</button>
       </div>
     </div>
+
+  <script type="text/javascript">
+    function checkEmpty() {
+      if (!document.getElementById('details').checkValidity()) {
+        document.getElementById('error').innerHTML = document.getElementById('details').ValidationMessage;
+      } 
+    }
+  </script>
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
