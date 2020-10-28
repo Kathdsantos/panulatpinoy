@@ -22,7 +22,10 @@ function Ready(){
 
 document.getElementById('submit').onclick = function(){
   if (!document.getElementById('details').checkValidity()) {
-    document.getElementById('error').innerHTML = "Please input some notes."
+    document.querySelector('.error').style.display = 'block';
+      setTimeout(function(){
+        document.querySelector('.error').style.display = 'none';
+      },2000);
   } else { 
   	Ready();
   	firebase.database().ref('users/' + username).set({
@@ -40,10 +43,18 @@ document.getElementById('submit').onclick = function(){
 
 
 document.getElementById('edit').onclick = function(){
+    if (!document.getElementById('details').checkValidity()) {
+    document.querySelector('.error').style.display = 'block';
+      setTimeout(function(){
+        document.querySelector('.error').style.display = 'none';
+      },2000);
+  } else {
+
     Ready();
     firebase.database().ref('users/' + username).once('value',function(snapshot){
       document.getElementById('details').value = snapshot.val().details;
   });
+  }
 }
 
 document.getElementById('delete').onclick = function(){
