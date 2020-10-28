@@ -34,6 +34,12 @@ document.getElementById('submit').onclick = function(){
     document.getElementById('details').value=' ';
 }
 
+document.getElementById('edit').onclick=function(){
+  Ready();
+  firebase.database().ref('users/'+name).once('value',function(snapshot){document.getElementById('details').value=snapshot.val().details;
+});
+}
+
 document.getElementById('delete').onclick = function(){
 	Ready();
 	firebase.database().ref('users/' + username).remove();

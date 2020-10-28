@@ -39,7 +39,6 @@ window.fbAsyncInit = function() {
       function testAPI(){
         FB.api('/me?fields=name,email', function(response){
           if(response && !response.error){
-            //console.log(response);
             buildProfile(response);
           }
         })
