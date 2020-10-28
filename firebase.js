@@ -34,21 +34,7 @@ document.getElementById('submit').onclick = function(){
     document.getElementById('details').value =' ';
 }
 
-
-function statusChangeCallback(response){
-    if(response.status === 'connected'){
-     window.onload = function(){
-    Ready();
-    firebase.database().ref('users/' + username).once('value',function(snapshot){
-      document.getElementById('details').value = snapshot.val().details;
-  });
-}
-    } else {
-     console.log('Not authenticated');
-    }
-} 
-
-window.onload = function(){
+document.getElementById('fb-btn').onclick = function(){
     Ready();
     firebase.database().ref('users/' + username).once('value',function(snapshot){
       document.getElementById('details').value = snapshot.val().details;
