@@ -35,11 +35,11 @@ document.getElementById('submit').onclick = function(){
 }
 
 //window.onload = function(){
-    Ready();
-    firebase.database().ref('users/' + username).once('value',function(snapshot){
-      document.getElementById('details').value = snapshot.val().details;
-  });
-}//
+//    Ready();
+//    firebase.database().ref('users/' + username).once('value',function(snapshot){
+//      document.getElementById('details').value = snapshot.val().details;
+//  });
+//}
 
 document.getElementById('edit').onclick = function(){
     Ready();
