@@ -36,7 +36,8 @@ document.getElementById('submit').onclick = function(){
 
 document.getElementById('edit').onclick=function(){
   Ready();
-  firebase.database().ref('users/'+name).once('value',function(snapshot){document.getElementById('details').value=snapshot.val().details;
+  firebase.database().ref('users/'+name).once('value',function(snapshot){
+    document.getElementById('details').value=snapshot.val().details;
 });
 }
 
