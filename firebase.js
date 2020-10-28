@@ -21,17 +21,21 @@ function Ready(){
 }
 
 document.getElementById('submit').onclick = function(){
-	Ready();
-	firebase.database().ref('users/' + username).set({
-		username:username,
-		useremail:useremail,
-  		details:details
-	});
-	document.querySelector('.submitalert').style.display = 'block';
-    setTimeout(function(){
-      document.querySelector('.submitalert').style.display = 'none';
-    },2000);
-    document.getElementById('details').value =' ';
+  if (!document.getElementById('details').checkValidity()) {
+    document.getElementById('error').innerHTML = "Please input some notes."
+  } else { 
+  	Ready();
+  	firebase.database().ref('users/' + username).set({
+  		username:username,
+  		useremail:useremail,
+    		details:details
+  	});
+  	document.querySelector('.submitalert').style.display = 'block';
+      setTimeout(function(){
+        document.querySelector('.submitalert').style.display = 'none';
+      },2000);
+      document.getElementById('details').value =' ';
+    }
 }
 
 
